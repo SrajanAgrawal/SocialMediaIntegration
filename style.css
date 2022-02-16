@@ -1,0 +1,224 @@
+body {
+  height: 100%;
+  background: url(background.mp4);
+  background-size: cover;
+  background-color: #004d4d;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+.video-wrapper {
+  border: 20px solid #000;
+  height: 720px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa :hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  padding: 15px;
+  padding-right: 39px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-google {
+  background: #990000;
+  color: white;
+  padding: 15px;
+  padding-right: 39px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.google, .facebook {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px 0px;
+  position: relative;
+}
+#facebookDetails{
+  display : flex;
+  flex-direction: column;
+  margin : 10px;
+}
+.google button, .facebook button {
+  padding: 12px;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+  width: 300px;
+}
+
+.account {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.account .resister, .account .signin {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-self: auto;
+  justify-content: space-between;
+}
+
+.resister button, .signin button {
+  font-size: 17px;
+  background: #18f583;
+  background: #004d4d;
+  background-image: -webkit-linear-gradient(#18f583, #004d4d);
+  background-image: -o-linear-gradient(#18f583, #004d4d);
+  background-image: linear-gradient(#004d4d, #43ad71, #18f583);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: white;
+  font-size: 16px;
+  font-weight: 550;
+  padding: 5px 20px 5px 20px;
+  text-decoration: none;
+  width: 180px;
+}
+
+.resister button:hover, .signin button:hover {
+  background: #18f583;
+  background-image: -webkit-linear-gradient(#004d4d, #43ad71);
+  background-image: -o-linear-gradient(#004d4d, #43ad71);
+  background-image: linear-gradient(#004d4d, #43ad71);
+  text-decoration: none;
+}
+
+.social-buttons {
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  right: 23%;
+  top: 24%;
+}
+
+/* facebook data user  */
+#fimage , #gimage{
+    width: 11em;
+    height: 11em;
+    position: relative;
+    border-radius: 50%;
+    padding: 0 0;
+    margin: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: left;
+    background-position:  center center;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+#fimage #fimg , #gimage #gimg{
+    height: 11em;
+    width: 11em;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 50%;
+    padding: 0 0;
+    margin: 0 0;
+    background-position:  center center;
+    z-index: 3;
+}
+#fname , #fmail , #gname , #gmail{
+  color : white;
+  font-size: 20px;
+}
+logout{
+  width: 450px;
+  padding : 3% 0%;
+}
+.btn-lg {
+  width : 400px;
+}
+.btn-lg:hover{
+  background-color : #b4b4b4;
+}
+#logout a , #signout a{
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+
+}
+/* Google data user */
+#my-signin2 {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    padding: 0.5em 0.5em;
+    margin: auto;
+    background-position:  center center;
+    z-index: 3;
+}
+/* Adding Some Animation */
+.google, .facebook, .account {
+  animation-name: floating;
+  animation-duration: 1.5s;
+  animation-iteration-count: ;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 700px) {
+
+  /* body {
+        background-color: blue;
+      } */
+  .social-buttons {
+    right: 6%;
+  }
+}
